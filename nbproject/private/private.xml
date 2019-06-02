@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/LocadoraIFMS/web/cliente/cadatroDeCliente.xhtml</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/LocadoraIFMS/web/template/template.xhtml</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/LocadoraIFMS/src/java/br/com/locadora/controller/ClienteController.java</file>
+            <file>file:/C:/Users/Frank/Documents/NetBeansProjects/LocadoraIFMS/web/index.xhtml</file>
+        </group>
     </open-files>
 </project-private>
