@@ -46,6 +46,6 @@ Contributor(s):
     <property name="hibernate.connection.username">nbuser</property>
     <property name="hibernate.connection.password">nbuser</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
-    <mapping class="br.com.locadora.mapeamento.pessoa.Cliente"/>
+    <mapping class="br.com.locadora.mapeamento.pessoa.ClienteMapeamento"/>
   </session-factory>
 </hibernate-configuration>

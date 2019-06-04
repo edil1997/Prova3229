@@ -5,6 +5,7 @@
  */
 package br.com.locadora.mapeamento.pessoa;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,7 +16,7 @@ import javax.persistence.MappedSuperclass;
  * @author Frank
  */
 @MappedSuperclass
-public abstract class Pessoa {
+public abstract class PessoaMapeamento implements Serializable{
     @Id
     @GeneratedValue
     private long id;

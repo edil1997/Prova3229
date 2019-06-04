@@ -7,20 +7,17 @@ package br.com.locadora.mapeamento.pessoa;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  *
  * @author Frank
  */
 @Entity
-public class Cliente extends Pessoa implements Serializable{
+@Table(name = "cliente")
+public class ClienteMapeamento extends PessoaMapeamento implements Serializable{
     private boolean pessoaFisica;
     private boolean bomPagador;
-    
-    public Cliente(){
-        this.pessoaFisica = true;
-        this.bomPagador = true;
-    }
 
     public boolean isPessoaFisica() {
         return pessoaFisica;

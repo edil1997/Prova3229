@@ -5,8 +5,9 @@
  */
 package br.com.locadora.controller;
 
+import br.com.locadora.mapeamento.pessoa.ClienteMapeamento;
+import br.com.locadora.repository.ClienteRepository;
 import javax.faces.bean.ManagedBean;
-import org.hibernate.SessionFactory;
 
 /**
  *
@@ -14,9 +15,33 @@ import org.hibernate.SessionFactory;
  */
 @ManagedBean
 public class ClienteController {
+    private ClienteMapeamento clienteMapeamento;
+    private ClienteRepository clienteRepository;
+    
+    public ClienteController(){
+        this.clienteMapeamento = new ClienteMapeamento();
+        this.clienteRepository = new ClienteRepository();
+    }
     
     public void salvar(){
-        //SessionFactory sf = NewHibernateUtil.getSessionFactory();
-        
+        this.clienteRepository.salvar(clienteMapeamento);
     }
+
+    public ClienteMapeamento getClienteMapeamento() {
+        return clienteMapeamento;
+    }
+
+    public void setClienteMapeamento(ClienteMapeamento clienteMapeamento) {
+        this.clienteMapeamento = clienteMapeamento;
+    }
+
+    public ClienteRepository getClienteRepository() {
+        return clienteRepository;
+    }
+
+    public void setClienteRepository(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
+    }
+    
+    
 }
