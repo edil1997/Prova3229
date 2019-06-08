@@ -12,14 +12,20 @@ and open the template in the editor.
 
     <ui:define name="corpo">
         <h:form>
-            <h:panelGrid columns="2">
-                Nome: <h:inputText value="#{clienteController.clienteMapeamento.nome}"/>
-                Idade: <h:inputText value="#{clienteController.clienteMapeamento.idade}"/>
-                CPF / CNPJ: <h:inputText value="#{clienteController.clienteMapeamento.cpfCNPJ}"/>
-                Pessoa Física: <h:selectBooleanCheckbox value="#{clienteController.clienteMapeamento.pessoaFisica}"/>
-                Bom Pagador: <h:selectBooleanCheckbox value="#{clienteController.clienteMapeamento.bomPagador}"/>
-                <h:commandButton value="Salvar" action="#{clienteController.salvar()}"/>
-            </h:panelGrid>
+            <div class="form-group row">
+                <div class="form-group col-md-4">
+                    <label for="nomeCli">Nome</label>
+                    <h:inputText id="nomeCli" class="form-control" value="#{clienteController.clienteMapeamento.nome}"/>
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="idadeCli">Idade</label>
+                    <h:inputText id="idadeCli" class="form-control" value="#{clienteController.clienteMapeamento.idade}"/>
+                </div>
+            </div>
+            CPF / CNPJ: <h:inputText class="form-control" value="#{clienteController.clienteMapeamento.cpfCNPJ}"/>
+            Pessoa Física: <h:selectBooleanCheckbox class="form-check-input" value="#{clienteController.clienteMapeamento.pessoaFisica}"/>
+            Bom Pagador: <h:selectBooleanCheckbox class="form-check-input" value="#{clienteController.clienteMapeamento.bomPagador}"/>
+            <h:commandButton value="Salvar" action="#{clienteController.salvar()}"/>
         </h:form>
     </ui:define>
 </ui:composition>

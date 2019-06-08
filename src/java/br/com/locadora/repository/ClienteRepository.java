@@ -7,8 +7,7 @@ package br.com.locadora.repository;
 
 import br.com.locadora.dao.Conexao;
 import br.com.locadora.mapeamento.pessoa.ClienteMapeamento;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import java.util.List;
 
 /**
  *
@@ -20,5 +19,13 @@ public class ClienteRepository extends Conexao{
         Conectar();
         getSession().save(cliente);
         Fechar();
+    }
+    
+    public List<ClienteMapeamento> buscarTodos(){
+        List<ClienteMapeamento> listaDeClientes;
+        Conectar();
+        listaDeClientes = getSession().createQuery("from ClienteMapeamento").list();
+        Fechar();
+        return listaDeClientes;
     }
 }

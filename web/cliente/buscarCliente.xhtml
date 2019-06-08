@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="/template/template.xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="corpo">
+        <h3>Buscar Clientes</h3>
+        <table class="table" onload="#{clienteController.buscarTodos()}">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF/CNPJ</th>
+            </tr>
+            <ui:repeat value="#{clienteController.listaDeClientes}" var="cliente">
+                <tr>
+                    <th>#{cliente.id}</th>
+                    <th>#{cliente.nome}</th>
+                    <th>#{cliente.idade}</th>
+                    <th>#{cliente.cpfCNPJ}</th>
+                </tr>
+            </ui:repeat>
+        </table>
+    </ui:define>
+</ui:composition>
