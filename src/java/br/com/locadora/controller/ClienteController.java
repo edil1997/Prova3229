@@ -35,29 +35,4 @@ public class ClienteController {
         this.listaDeClientes = this.clienteRepository.buscarTodos();
     }
 
-    public ClienteMapeamento getClienteMapeamento() {
-        return clienteMapeamento;
-    }
-
-    public void setClienteMapeamento(ClienteMapeamento clienteMapeamento) {
-        this.clienteMapeamento = clienteMapeamento;
-    }
-
-    public ClienteRepository getClienteRepository() {
-        return clienteRepository;
-    }
-
-    public void setClienteRepository(ClienteRepository clienteRepository) {
-        this.clienteRepository = clienteRepository;
-    }
-
-    public List<ClienteMapeamento> getListaDeClientes() {
-        return listaDeClientes;
-    }
-
-    public void setListaDeClientes(List<ClienteMapeamento> listaDeClientes) {
-        this.listaDeClientes = listaDeClientes;
-    }
-    
-    
 }

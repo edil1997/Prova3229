@@ -8,23 +8,28 @@ and open the template in the editor.
 <ui:composition
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
     template="/template/template.xhtml"
-    xmlns:h="http://xmlns.jcp.org/jsf/html">
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <ui:define name="corpo">
         <h3>Buscar Clientes</h3>
-        <table class="table" onload="#{clienteController.buscarTodos()}">
+        <table class="table" onload="">
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>CPF/CNPJ</th>
+                <th>Pessoa Física</th>
+                <th>Bom Pagador</th>
             </tr>
             <ui:repeat value="#{clienteController.listaDeClientes}" var="cliente">
                 <tr>
                     <th>#{cliente.id}</th>
                     <th>#{cliente.nome}</th>
                     <th>#{cliente.idade}</th>
-                    <th>#{cliente.cpfCNPJ}</th>
+                    <th>#{cliente.cpfCNPJ}</th>  
+                    <th>#{cliente.pessoaFisica}</th>
+                    <th>#{cliente.bomPagador}</th>
                 </tr>
             </ui:repeat>
         </table>

@@ -2,9 +2,10 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="cliente/cadatroDeCliente.xhtml" x="332" y="56" zoom="true"/>
-        <Node id="template/template.xhtml" x="216" y="204" zoom="true"/>
+        <Node id="template/template.xhtml" x="103" y="342" zoom="true"/>
+        <Node id="cliente/cadatroDeCliente.xhtml" x="636" y="56" zoom="true"/>
         <Node id="index.xhtml" x="53" y="55" zoom="true"/>
+        <Node id="cliente/buscarCliente.xhtml" x="419" y="399" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

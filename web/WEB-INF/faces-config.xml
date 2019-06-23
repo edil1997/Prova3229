@@ -6,20 +6,16 @@
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>cadastroDeCliente</from-outcome>
-            <to-view-id>/cliente/cadatroDeCliente.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
             <from-outcome>home</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>buscarCliente</from-outcome>
+            <to-view-id>/cliente/buscarCliente.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/cliente/cadatroDeCliente.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>cadastroDeCliente</from-outcome>
-            <to-view-id>/cliente/cadatroDeCliente.xhtml</to-view-id>
-        </navigation-case>
         <navigation-case>
             <from-outcome>home</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>

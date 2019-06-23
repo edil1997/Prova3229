@@ -13,19 +13,32 @@ and open the template in the editor.
     <ui:define name="corpo">
         <h:form>
             <div class="form-group row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="nomeCli">Nome</label>
-                    <h:inputText id="nomeCli" class="form-control" value="#{clienteController.clienteMapeamento.nome}"/>
+                    <h:inputText id="nomeCli" class="form-control"/>
                 </div>
-                <div class="form-group col-md-5">
+                <div class="form-group col-md-2">
                     <label for="idadeCli">Idade</label>
-                    <h:inputText id="idadeCli" class="form-control" value="#{clienteController.clienteMapeamento.idade}"/>
+                    <h:inputText id="idadeCli" class="form-control" value="#{clienteController.clienteMapeamento.nome}"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="cpfCNPJ"> CPF / CNPJ</label>
+                    <h:inputText id="cpfCNPJ" class="form-control" value="#{clienteController.clienteMapeamento.nome}"/>
                 </div>
             </div>
-            CPF / CNPJ: <h:inputText class="form-control" value="#{clienteController.clienteMapeamento.cpfCNPJ}"/>
-            Pessoa Física: <h:selectBooleanCheckbox class="form-check-input" value="#{clienteController.clienteMapeamento.pessoaFisica}"/>
-            Bom Pagador: <h:selectBooleanCheckbox class="form-check-input" value="#{clienteController.clienteMapeamento.bomPagador}"/>
-            <h:commandButton value="Salvar" action="#{clienteController.salvar()}"/>
+            <div class="form-group">
+                <div class="form-check">
+                    <h:selectBooleanCheckbox id="pessoaFisica" class="form-check-input" value="#{clienteController.clienteMapeamento.pessoaFisica}"/>
+                    <label class="form-check-label" for="pessoaFisica">Pessoa Física</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <h:selectBooleanCheckbox id="bomPagador" class="form-check-input" value="#{clienteController.clienteMapeamento.bomPagador}"/>
+                    <label class="form-check-label" for="bomPagador">Bom Pagador</label>
+                </div>    
+            </div>
+            <h:commandButton class="btn btn-primary" value="Salvar" action="#{clienteController.salvar()}"/>
         </h:form>
     </ui:define>
 </ui:composition>
