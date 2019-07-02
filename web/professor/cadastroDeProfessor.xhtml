@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="/template/template.xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="corpo">
+        <h:form>
+            <div class="form-group row">
+                <div class="form-group col-md-6">
+                    <label for="nomeCli">Nome</label>
+                    <h:inputText id="nomeCli" class="form-control" value="#{professorController.professorMapeamento.nome}"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="cpf"> CPF </label>
+                    <h:inputText id="cpf" class="form-control" value="#{professorController.professorMapeamento.cpf}"/>
+                </div>
+            </div>
+             <div class="form-group col-md-4">
+                    <label for="siape"> SIAPE </label>
+                    <h:inputText id="siape" class="form-control" value="#{professorController.professorMapeamento.siape}"/>
+                </div>
+             <div class="form-group col-md-4">
+                    <label for="salario"> Salário </label>
+                    <h:inputText id="salario" class="form-control" value="#{professorController.professorMapeamento.salario}"/>
+                </div>
+             <div class="form-group col-md-4">
+                    <label for="tempo"> Tempo de Atuação </label>
+                    <h:inputText id="tempo" class="form-control" value="#{professorController.professorMapeamento.tempo}"/>
+                </div>
+             <div class="form-group col-md-4">
+                    <label for="areaAtuacao"> Area de Atuação </label>
+                    <h:inputText id="areaAtuacao" class="form-control" value="#{professorController.professorMapeamento.areaAtuacao}"/>
+                </div>
+            <h:commandButton class="btn btn-primary" value="Salvar" action="#{professorController.salvar()}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>

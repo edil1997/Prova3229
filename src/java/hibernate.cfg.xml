@@ -43,8 +43,10 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
     <property name="hibernate.connection.url">jdbc:derby://localhost:1527/frames1</property>
-    <property name="hibernate.connection.username">nbuser</property>
-    <property name="hibernate.connection.password">nbuser</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">1</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="br.com.locadora.mapeamento.pessoa.ClienteMapeamento"/>
+    <mapping class="br.com.locadora.mapeamento.pessoa.ProfessorMapeamento"/>
   </session-factory>
 </hibernate-configuration>

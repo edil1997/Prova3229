@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="/template/template.xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:define name="corpo">
+        <h3>Buscar Professor</h3>
+        <table class="table" onload="#{professorController.buscarTodos()}">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>SIAPE</th>
+                <th>Salario</th>
+                <th>Tempo de Atuação</th>
+                <th>Área de Atuação</th>
+            </tr>
+            <ui:repeat value="#{professorController.listaDeProfessor}" var="professor">
+                <tr>
+                    <th>#{professor.id}</th>
+                    <th>#{professor.nome}</th>
+                    <th>#{professor.cpf}</th>
+                    <th>#{professor.siape}</th>  
+                    <th>#{professor.salario}</th>
+                    <th>#{professor.tempo}</th>
+                    <th>#{professor.areaAtuacao}</th>
+                </tr>
+            </ui:repeat>
+        </table>
+    </ui:define>
+</ui:composition>
